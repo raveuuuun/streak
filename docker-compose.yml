@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    container_name: streak-backend
+    ports:
+      - "3001:3000"   # <-- changed host port
+    restart: unless-stopped
